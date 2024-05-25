@@ -1,5 +1,6 @@
-//import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import styled from "styled-components";
+import { WHITE_NEUTRAL,DARK_BLUE, ORANGE } from "../../constants/Colors";
 
 
 export const Logo = styled.img`
@@ -15,27 +16,27 @@ export const NavbarContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   vertical-align: middle;
-  background-color: #020106;
-  color: white;
+  background-color:  ${DARK_BLUE} ;
+  color:  ${WHITE_NEUTRAL};
   width: 100%;
   height: 60px;
   margin-bottom:50px;
 `;
 
-export const LinkNavStyle = styled.div`
+export const LinkNavStyle = styled(Link)`
   text-decoration: none;
   cursor: pointer;
-  color: white;
+  color: ${ORANGE} ;
   padding: 8px ;
   margin:10px ;
   border-radius:4px;
   &:hover {
-    background: white;
-    color: #020106;
+    background:  ${WHITE_NEUTRAL};
+    color:  ${DARK_BLUE};
     border-radius: 0;
   }
   @media screen and (max-width: 820px) {
-    color:#020106;
+    color: ${DARK_BLUE};
     margin:0 auto;
   }
 `;
@@ -43,7 +44,7 @@ export const LinkNavStyle = styled.div`
 export const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
-  background: white;
+  background:  ${WHITE_NEUTRAL};
   width: 90%;
   margin:30px auto;
 
@@ -81,7 +82,7 @@ export const ButtonDropdown = styled.button`
   width: 40px;
   height: 40px;
   background: none;
-  color: white;
+  color: ${WHITE_NEUTRAL} ;
   display: none;
   padding:0px;
   margin:10px;

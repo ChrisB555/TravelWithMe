@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DARK_BLUE, WHITE_NEUTRAL } from "../../constants/Colors";
 
 
 export const MainContainer = styled.div`
@@ -21,6 +22,10 @@ export const MainHomeGalleryItem = styled.img`
   width: 220px;
   height: auto;
   object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+  &:hover{
+    transform: scale(1.05);
+  }
   @media screen and (max-width: 820px) {
     width: 70px;
   }
@@ -36,13 +41,13 @@ export const Buttons = styled.button`
 width:200px;
 height:40px;
 font-weight:700;
-color: #020106;
+color: ${DARK_BLUE};
 margin:0 10px;
 cursor:pointer;
 border-radius:5px;
 &:hover {
-    background:#020106 ;
-    color: white;
+    background:  ${DARK_BLUE};
+    color: ${WHITE_NEUTRAL};
     border:solid 2px white;
   }
   @media screen and (max-width: 820px) {

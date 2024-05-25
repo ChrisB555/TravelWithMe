@@ -1,5 +1,6 @@
 import { LinkNavStyle } from "./Navbar.style";
 
+
 function NavLinks({ href, title }) {
   return (
     <>

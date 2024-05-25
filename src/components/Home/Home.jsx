@@ -7,7 +7,7 @@ function Home() {
     <HomeContainer>     
          <MainHome/>
          <MainButtons/>
-         <HomeText>Let's Begin The Travel!</HomeText>
+         <HomeText>Let's Begin To Travel!</HomeText>
     </HomeContainer>
     
   );

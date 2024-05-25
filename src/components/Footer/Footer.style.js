@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { DARK_BLUE, WHITE_NEUTRAL } from "../../constants/Colors";
 
 
 export const FooterContainer = styled.div`
  margin-top:50px;
   padding: 16px 0;
-  background: #020106;
-  color: white;
+  background-color: ${DARK_BLUE} ;
+  color: ${WHITE_NEUTRAL};
   width: 100%;
   gap: 16px;
   flex-wrap: wrap;
