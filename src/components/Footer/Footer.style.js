@@ -3,7 +3,7 @@ import { DARK_BLUE, WHITE_NEUTRAL } from "../../constants/Colors";
 
 
 export const FooterContainer = styled.div`
- margin-top:50px;
+ margin-top:80px;
   padding: 16px 0;
   background-color: ${DARK_BLUE} ;
   color: ${WHITE_NEUTRAL};

@@ -8,10 +8,3 @@ export const HomeContainer = styled.div`
 `;
 
 
-export const HomeText = styled.h2`
-color:${WHITE_NEUTRAL};
-@media screen and (max-width: 820px) {
-    text-align:center;
-    font-size:18px;
-  }
-`;
