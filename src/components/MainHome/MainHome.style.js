@@ -64,13 +64,22 @@ export const SelectContainer = styled.div`
   margin: 30px auto;
 `;
 export const Select = styled.select`
+  width: 100%;
+  height: 35px;
+  border-radius: 8px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+`;
+export const SelectPlan = styled.select`
   width: 40%;
   height: 35px;
   border-radius: 8px;
-  margin: 0 10px;
+  margin: 10px;
   text-align: center;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
 `;
 
 export const Option = styled.option`
@@ -84,7 +93,7 @@ export const HomeBtn = styled.button`
   font-weight: 700;
   font-size: 20px;
   color: ${ORANGE};
-  margin:  100px auto;
+  margin:  20px auto;
   cursor: pointer;
   border-radius: 5px;
   &:hover {

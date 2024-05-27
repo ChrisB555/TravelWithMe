@@ -2,7 +2,7 @@ import { ContactTextarea, ErrorP, ContactLabel } from "./Contact.style";
 
 const ContactFormTextarea = ({
   name,
-  handleChangeTextarea,
+  handleChange,
   type,
   value,
   error,
@@ -13,7 +13,7 @@ const ContactFormTextarea = ({
       <ContactTextarea
         placeholder={name}
         defaultValue={value}
-        onBlur={(e) => handleChangeTextarea(e, name)}
+        onBlur={(e) => handleChange(e, name)}
         type={type}
       />
       {error && <ErrorP>{error}</ErrorP>}
