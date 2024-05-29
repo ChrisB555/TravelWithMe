@@ -1,0 +1,330 @@
+{ 
+    "users": [
+      {
+        "Name": "",
+        "SurName": "",
+        "Mobile": "",
+        "Email": "",
+        "Textarea": "",
+        "id": 0
+      }
+    ],
+  
+    "Italy": [{
+      "id":1,
+      "name":"Italy",
+      "description":"",
+      "image":""
+      
+    },
+    {
+      "name": "Rome",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 2
+    },
+    {
+      "name": "Florence",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 3
+    },
+    {
+      "name": "Venice",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 4
+    }
+  ],
+    "France": [{
+      "id":2,
+      "name":"France",
+      "description":"",
+      "image":""
+     
+    },
+    {
+      "city": "Paris",
+      "country": "France",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 3
+    },
+    {
+      "city": "Nisa",
+      "country": "France",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 4
+    },
+    {
+      "city": "Strassbourg",
+      "country": "France",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 5
+    }
+  ],
+    "Romania": [{
+      "id":3,
+      "name":"Romania",
+      "description":"",
+      "image":""
+      
+    },
+    {
+      "city": "Sighisoara",
+      "country": "Romania",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 4
+    },
+    {
+      "city": "Constanta",
+      "country": "Romania",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 5
+    },
+    {
+      "city": "Cluj-Napoca",
+      "country": "",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 6
+    }
+  ],
+    "Spain": [{
+      "id":4,
+      "name":"Spain",
+      "description":"",
+      "image":""
+     
+    },
+    {
+      "city": "Barcelona",
+      "country": "Spain",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 5
+    },
+    {
+      "city": "Sevilla",
+      "country": "Spain",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 6
+    },
+    {
+      "city": "Valencia",
+      "country": "Italy",
+      "image": "",
+      "description": "",
+      "category": "",
+      "id": 7
+    }
+  ],
+    "cities":[
+        {
+          "name": "Rome",
+          "country": "Italy",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 1
+        },
+        {
+          "name": "Florence",
+          "country": "Italy",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 2
+        },
+        {
+          "name": "Venice",
+          "country": "Italy",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 3
+        },
+        {
+          "city": "Paris",
+          "country": "France",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 4
+        },
+        {
+          "city": "Nisa",
+          "country": "France",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 5
+        },
+        {
+          "city": "Strassbourg",
+          "country": "France",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 6
+        },
+        {
+          "city": "Sighisoara",
+          "country": "Romania",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 7
+        },
+        {
+          "city": "Constanta",
+          "country": "Romania",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 8
+        },
+        {
+          "city": "Cluj-Napoca",
+          "country": "",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 9
+        },
+        {
+          "city": "Barcelona",
+          "country": "Spain",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 10
+        },
+        {
+          "city": "Sevilla",
+          "country": "Spain",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 11
+        },
+        {
+          "city": "Valencia",
+          "country": "Italy",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 12
+        }
+],
+      
+    "Regions":[
+        {
+          "name": "Toscana",
+          "country": "Italy",
+          "image": "",
+          "description": "",
+          "id": 1
+        },
+        {
+          "name": "Puglia",
+          "country": "Italy",
+          "image": "",
+          "description": "",
+          "id": 2
+        },
+        {
+          "name": "Lombardia",
+          "country": "Italy",
+          "image": "",
+          "description": "",
+          "id": 3
+        },
+        {
+          "region": "Provence",
+          "country": "France",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 4
+        },
+        {
+          "region": "Loir Valley",
+          "country": "France",
+          "image": "",
+          "description": "",
+          "id": 5
+        },
+        {
+          "region": "Normandy",
+          "country": "France",
+          "image": "",
+          "description": "",
+          "id": 6
+        },
+        {
+          "region": "Transilvania",
+          "country": "Romania",
+          "image": "",
+          "description": "",
+          "id": 7
+        },
+        {
+          "region": "Danube Delta",
+          "country": "Romania",
+          "image": "",
+          "description": "",
+          "id": 8
+        },
+        {
+          "region": "Bucovina",
+          "country": "",
+          "image": "",
+          "description": "",
+          "id": 9
+        },
+        {
+          "region": "Andalusia",
+          "country": "Spain",
+          "image": "",
+          "description": "",
+          "id": 10
+        },
+        {
+          "region": "Basque Country",
+          "country": "Spain",
+          "image": "",
+          "description": "",
+          "id":11
+        },
+        {
+          "region": "Balearic Islands",
+          "country": "Italy",
+          "image": "",
+          "description": "",
+          "category": "",
+          "id": 12
+        }
+      ] 
+           
+  }
+
