@@ -1,17 +1,19 @@
 import useFetchData from "../../hooks/useFetchData";
+import { useParams } from "react-router-dom";
 import { HomeBtn, Option, Select, SelectContainer } from "./MainHome.style";
 import { useState } from "react";
 
 function SelectOptionExplore() {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [clicked, setClicked] = useState(false);
-
+  
+  const { id } = useParams();
   const url = selectedCountry
     ? `http://localhost:3001/${selectedCountry}`
     : null;
 
-  const { data, error, loading } = useFetchData(url, clicked, setClicked);
-  
+ 
+    const { data, error, loading } = useFetchData(url, clicked, setClicked);
 
   const handleDropdownChange = (e) => {
     setSelectedCountry(e.target.value);

@@ -1,81 +1,102 @@
-import useFetchData from "../../hooks/useFetchData";
-import { HomeBtn, Option, SelectPlan, SelectContainer } from "./MainHome.style";
-import Cities from "./Cities/Cities";
+import { useParams } from "react-router-dom";
 import { useState } from "react";
+import useFetchData from "../../hooks/useFetchData";
+import useFetchDataCity from "../../hooks/useFetchDataCity";
+import useFetchDataRegion from "../../hooks/useFetchDataRegion";
+import { HomeBtn, Option, SelectPlan, SelectContainer } from "./MainHome.style";
+import CitiesRegions from "./CitiesRegions/CitiesRegions"
 
-function SelectOptionExplore() {
+
+
+function SelectOptionPlan() {
   const [selectedCountry, setSelectedCountry] = useState("");
-  const [selectedCityRegion, setSelectedCityRegion] = useState("");
+  const [selectedCity, setSelectedCity] = useState("");
+  const [selectedRegion, setSelectedRegion] = useState("");
   const [clicked, setClicked] = useState(false);
+  
+  const { id } = useParams();
 
-  const url =  selectedCountry
-  ? `http://localhost:3001/${selectedCountry}`
-  : null;
- console.log(url);
+  const url = selectedCountry 
+    ? `http://localhost:3001/${selectedCountry}`
+    : null;
 
-const { data, error, loading } = useFetchData(url,clicked,setClicked);
-  console.log(selectedCountry,selectedCityRegion,data,error)
+
+  const urlCity = selectedCity ? 
+  `http://localhost:3001/${selectedCity}`
+   : null;
+
+  const urlRegion = selectedRegion
+    ? `http://localhost:3001/${selectedRegion}`
+    : null;
+
+    const { data, error, loading } = useFetchData(url, clicked, setClicked);
+  const { dataCity, errorCity, loadingCity } = useFetchDataCity(
+    urlCity,
+    clicked,
+    setClicked
+  );
+  const { dataRegion, errorRegion, loadingRegion } = useFetchDataRegion(
+    urlRegion,
+    clicked,
+    setClicked
+  );
+
 
   const handleDropdownChange1 = (e) => {
     setSelectedCountry(e.target.value);
   };
   const handleDropdownChange2 = (e) => {
-    setSelectedCityRegion(e.target.value);
+     setSelectedRegion
+      ? setSelectedCity(e.target.value)
+      : setSelectedRegion(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setClicked(true);
+  
   };
-
+  
   return (
     <>
-      <SelectContainer >
+      <SelectContainer>
         <form onSubmit={(e) => handleSubmit(e)}>
-            <SelectPlan
-              value={selectedCountry}
-              onChange={handleDropdownChange1}     
-            >
-              <Option  value="">
-                Pick a country
-              </Option>
-              <Option  value="italy">
-                Italy
-              </Option>
-              <Option  value="france">
-                France
-              </Option>
-              <Option  value="romania">
-                Romania
-              </Option>
-              <Option  value="spain">
-                Spain
-              </Option>
-            </SelectPlan>
-            <SelectPlan
-              value={selectedCityRegion}
-              onChange={handleDropdownChange2}             
-            >
-              <Option value="">
-                Pick a city/region
-              </Option>
-              <Option  value="cities">
-                Cities
-              </Option>
-              <Option value="regions">
-                Regions
-              </Option>        
-            </SelectPlan>      
+          <SelectPlan value={selectedCountry} onChange={handleDropdownChange1}>
+            <Option value="">Pick a country</Option>
+            <Option value="italy">Italy</Option>
+            <Option value="france">France</Option>
+            <Option value="romania">Romania</Option>
+            <Option value="spain">Spain</Option>
+          </SelectPlan>
+          <SelectPlan value={selectedCity} onChange={handleDropdownChange2}>
+            <Option value="">Pick a city/region</Option>
+            <Option value="cities">Cities</Option>
+            <Option value="regions">Regions</Option>
+          </SelectPlan>
           <HomeBtn type="submit">Let's Begin To Travel!</HomeBtn>
-        </form>  
+        </form>
 
-        <Cities selectedCountry={selectedCountry} selectedCityRegion={selectedCityRegion} data={data}/> 
+        <CitiesRegions
+          selectedCountry={selectedCountry}
+          selectedCity={selectedCity}
+          selectedRegion={selectedRegion}
+          data={data}
+          dataCity={dataCity}
+          dataRegion={dataRegion}
+          clicked={clicked}
+          setClicked={setClicked}
+        />
+       
       </SelectContainer>
-    {loading && <div>Loading...</div>}
+      {loading && <div>Loading...</div>}
+      {loadingCity && <div>Loading...</div>}
+      {loadingRegion && <div>Loading...</div>}
       {error && <div>Error: {error.message}</div>}
-      {data && console.log(data)}
+      {errorCity && <div>Error: {errorCity.message}</div>}
+      {errorRegion && <div>Error: {errorRegion.message}</div>}
+   
     </>
   );
 }
 
-export default SelectOptionExplore;
+export default SelectOptionPlan;
