@@ -6,7 +6,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import CitiesRegions from "./components/MainHome/CitiesRegions/CitiesRegions";
-
+import Explore from "./components/Explore/Explore";
 
 function App() {
   return (
@@ -19,8 +19,8 @@ function App() {
         <Route path="/about" element={< About/>}></Route>
         <Route path="/my-travel/:country/:cityOrRegion" element={<CitiesRegions/>}></Route>
         <Route path="/contact" element={<Contact/>}></Route>
-        <Route path="/cities-regions" element={<CitiesRegions/>}></Route>
-     
+       
+        <Route path="/explore/:country/:id" element={<Explore />}></Route>
       </Routes>
      <Footer/> 
     </>

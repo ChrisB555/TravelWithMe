@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { DARK_BLUE, ORANGE, WHITE_NEUTRAL } from "../../constants/Colors";
 
@@ -87,7 +88,7 @@ export const Option = styled.option`
   font-size: 20px;
 `;
 
-export const HomeBtn = styled.button`
+export const HomeBtn = styled(Link)`
   width: 65%;
   height: 40px;
   font-weight: 700;
@@ -106,4 +107,15 @@ export const HomeBtn = styled.button`
     width: 70%;
     height: 25px;
   }
+`;
+export const FormBody = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+export const LabelHead = styled.label`
+  color: ${WHITE_NEUTRAL};
+  font-weight: 700;
+  font-size: 20px;
+  height: auto;
+  margin: 10px 0 10px 0;
 `;
